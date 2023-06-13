@@ -3,6 +3,7 @@
 
 	#include <string>
 	#include <iostream>
+	#include "ASpell.hpp"
 
 	class Warlock
 	{
@@ -13,7 +14,10 @@
 			const std::string&	getName(void) const;
 			const std::string&	getTitle(void) const;
 			void				setTitle(const std::string& newTitle);
-			void				introduce() const;
+			void				introduce(void) const;
+			void				learnSpell(ASpell* spell);
+			void				forgetSpell(std::string spell);
+			void				launchSpell(std::string spell, const ATarget& target);
 
 		private:
 			Warlock(const Warlock& obj);
@@ -21,6 +25,8 @@
 			Warlock&	operator=(const Warlock& rhs);
 			std::string	name;
 			std::string	title;
+			ASpell*		spellList[10000];
+			int			index;
 	};
 
 #endif // WARLOCK_HPP
