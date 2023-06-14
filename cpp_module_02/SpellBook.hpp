@@ -21,7 +21,8 @@
 			SpellBook(const SpellBook& obj);
 			const SpellBook&	operator=(const SpellBook& rhs);
 
-			ASpell* bookContent[10000];
+			ASpell*	bookContent[10000];
+			int		index;
 
 	};
 
