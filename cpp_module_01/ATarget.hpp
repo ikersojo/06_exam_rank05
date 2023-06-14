@@ -11,7 +11,7 @@
 	{
 		public:
 			ATarget();
-			ATarget(const std::string type);
+			ATarget(const std::string& type);
 			ATarget(const ATarget& obj);
 			virtual ~ATarget();
 

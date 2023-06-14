@@ -17,7 +17,7 @@
 
 			Fwoosh& operator=(const Fwoosh& rhs);
 
-			ASpell*		clone(void) const;
+			virtual ASpell*		clone(void) const;
 
 	};
 

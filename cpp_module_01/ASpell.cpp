@@ -1,11 +1,11 @@
 #include "ASpell.hpp"
 
-ASpell::ASpell() : name("un-kown"), effects("un-kown")
+ASpell::ASpell()
 {
 
 }
 
-ASpell::ASpell(const std::string name, const std::string effects) : name(name), effects(effects)
+ASpell::ASpell(const std::string& name, const std::string& effects) : name(name), effects(effects)
 {
 
 }
@@ -30,12 +30,12 @@ ASpell&		ASpell::operator=(const ASpell& rhs)
 	return (*this);
 }
 
-const std::string		ASpell::getName(void) const
+const std::string&		ASpell::getName(void) const
 {
 	return (this->name);
 }
 
-const std::string		ASpell::getEffects(void) const
+const std::string&		ASpell::getEffects(void) const
 {
 	return (this->effects);
 }

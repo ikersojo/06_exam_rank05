@@ -11,16 +11,16 @@
 	{
 		public:
 			ASpell();
-			ASpell(const std::string name, const std::string effects);
+			ASpell(const std::string& name, const std::string& effects);
 			ASpell(const ASpell& obj);
 			virtual ~ASpell();
 
 			ASpell& operator=(const ASpell& rhs);
 
-			const std::string	getName(void) const;
-			const std::string	getEffects(void) const;
-			virtual ASpell*		clone(void) const = 0;
+			const std::string&	getName(void) const;
+			const std::string&	getEffects(void) const;
 			void				launch(const ATarget& target) const;
+			virtual ASpell*		clone(void) const = 0;
 
 		protected:
 			std::string	name;

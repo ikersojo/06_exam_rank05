@@ -1,11 +1,11 @@
 #include "ATarget.hpp"
 
-ATarget::ATarget() : type("un-known")
+ATarget::ATarget()
 {
 
 }
 
-ATarget::ATarget(const std::string type) : type(type)
+ATarget::ATarget(const std::string& type) : type(type)
 {
 
 }

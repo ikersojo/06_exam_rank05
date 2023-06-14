@@ -5,7 +5,7 @@ Fwoosh::Fwoosh() : ASpell("Fwoosh", "fwooshed")
 
 }
 
-Fwoosh::Fwoosh(const Fwoosh& obj)
+Fwoosh::Fwoosh(const Fwoosh& obj) : ASpell("Fwoosh", "fwooshed")
 {
 	*this = obj;
 }

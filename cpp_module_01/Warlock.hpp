@@ -13,11 +13,13 @@
 
 			const std::string&	getName(void) const;
 			const std::string&	getTitle(void) const;
+			ASpell*				getSpellListItem(int i) const;
+			int					getIndex(void) const;
 			void				setTitle(const std::string& newTitle);
 			void				introduce(void) const;
 			void				learnSpell(ASpell* spell);
-			void				forgetSpell(std::string spell);
-			void				launchSpell(std::string spell, const ATarget& target);
+			void				forgetSpell(const std::string& spell);
+			void				launchSpell(const std::string& spell, const ATarget& target);
 
 		private:
 			Warlock(const Warlock& obj);

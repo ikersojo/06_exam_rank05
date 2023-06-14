@@ -17,7 +17,7 @@
 
 			Dummy& operator=(const Dummy& rhs);
 
-			ATarget*	clone(void) const;
+			virtual ATarget*	clone(void) const;
 	};
 
 #endif // DUMMY_HPP
