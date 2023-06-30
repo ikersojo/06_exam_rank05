@@ -33,7 +33,7 @@
 
 			std::string		name;
 			std::string		title;
-			SpellBook		*book;
+			SpellBook		book;
 	};
 
 #endif // WARLOCK_HPP

@@ -7,33 +7,33 @@ TargetGenerator::TargetGenerator(void)
 
 TargetGenerator::~TargetGenerator(void)
 {
-	std::map<std::string, ATarget*>::iterator	itr = targetList.begin();
-	while (itr != targetList.end())
+	std::map<std::string, ATarget*>::iterator	itr = this->targetList.begin();
+	while (itr != this->targetList.end())
 	{
 		delete itr->second;
 		++itr;
 	}
-	targetList.clear();
+	this->targetList.clear();
 }
 
 void		TargetGenerator::learnTargetType(ATarget* target)
 {
 	if (target)
-		targetList[target->getType()] = target;
+		this->targetList[target->getType()] = target;
 }
 
 void		TargetGenerator::forgetTargetType(const std::string& type)
 {
-	if (targetList.find(type) != targetList.end())
+	if (this->targetList.find(type) != this->targetList.end())
 	{
-		delete targetList.find(type)->second;
-		targetList.erase(targetList.find(type));
+		delete this->targetList.find(type)->second;
+		this->targetList.erase(targetList.find(type));
 	}
 }
 
 ATarget*	TargetGenerator::createTarget(const std::string& type)
 {
-	if (targetList.find(type) != targetList.end())
-		return targetList.find(type)->second;
+	if (this->targetList.find(type) != this->targetList.end())
+		return this->targetList.find(type)->second;
 	return NULL;
 }

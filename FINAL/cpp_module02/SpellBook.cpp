@@ -19,21 +19,21 @@ SpellBook::~SpellBook(void)
 void	SpellBook::learnSpell(ASpell* spell)
 {
 	if (spell)
-		spellList[spell->getName()] = spell;
+		this->spellList[spell->getName()] = spell;
 }
 
 void	SpellBook::forgetSpell(const std::string& spellName)
 {
-	if (spellList.find(spellName) != spellList.end())
+	if (this->spellList.find(spellName) != this->spellList.end())
 	{
-		delete spellList.find(spellName)->second;
-		spellList.erase(spellName);
+		delete this->spellList.find(spellName)->second;
+		this->spellList.erase(spellName);
 	}
 }
 
 ASpell*	SpellBook::createSpell(const std::string& spellName)
 {
 	if (this->spellList.find(spellName) != this->spellList.end())
-		return (spellList[spellName]);
+		return (this->spellList[spellName]);
 	return (NULL);
 }
