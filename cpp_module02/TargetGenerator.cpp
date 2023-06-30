@@ -7,13 +7,13 @@ TargetGenerator::TargetGenerator(void)
 
 TargetGenerator::~TargetGenerator(void)
 {
-	std::map<std::string, ATarget*>::iterator	itr = this->targetList.begin();
-	while (itr != this->targetList.end())
-	{
-		delete itr->second;
-		++itr;
-	}
-	this->targetList.clear();
+	// std::map<std::string, ATarget*>::iterator	itr = this->targetList.begin();
+	// while (itr != this->targetList.end())
+	// {
+	// 	delete itr->second;
+	// 	++itr;
+	// }
+	// this->targetList.clear();
 }
 
 void		TargetGenerator::learnTargetType(ATarget* target)

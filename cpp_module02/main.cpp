@@ -29,6 +29,5 @@ int main()
 
 	richard.introduce();
 	richard.launchSpell("Polymorph", *wall);
-	std::cout << "...." << std::endl;
 	richard.launchSpell("Fireball", *wall);
 }
