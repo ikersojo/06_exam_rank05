@@ -40,17 +40,20 @@ void					Warlock::introduce(void) const
 void	Warlock::learnSpell(ASpell* spell)
 {
 	if(spell)
-		spellList[spell->getName()] = spell;
+		this->spellList[spell->getName()] = spell->clone();
 }
 
 void	Warlock::forgetSpell(std::string spellName)
 {
-	if(spellList.find(spellName) != spellList.end())
-		spellList.erase(spellList.find(spellName));
+	if(this->spellList.find(spellName) != this->spellList.end())
+	{
+		delete spellList.find(spellName)->second;
+		this->spellList.erase(this->spellList.find(spellName));
+	}
 }
 
 void	Warlock::launchSpell(std::string spellName, const ATarget& target)
 {
-	if(spellList.find(spellName) != spellList.end())
-		spellList[spellName]->launch(target);
+	if(this->spellList.find(spellName) != this->spellList.end())
+		this->spellList[spellName]->launch(target);
 }
