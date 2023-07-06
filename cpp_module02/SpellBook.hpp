@@ -1,8 +1,8 @@
 #ifndef SPELLBOOK_HPP
 	#define SPELLBOOK_HPP
 
-	#include <iostream>
 	#include <string>
+	#include <iostream>
 	#include "ASpell.hpp"
 	#include <map>
 
@@ -18,12 +18,8 @@
 			void	forgetSpell(const std::string& spellName);
 			ASpell*	createSpell(const std::string& spellName);
 
-			std::map<std::string, ASpell*>	spellList;
-
 		private:
-			SpellBook(const SpellBook& obj);
-			SpellBook&	operator=(const SpellBook& rhs);
-
+			std::map< std::string, ASpell* >	spellList;
 	};
 
 #endif // SPELLBOOK_HPP

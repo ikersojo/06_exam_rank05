@@ -8,8 +8,7 @@
 		public:
 			Polymorph(void);
 			virtual ~Polymorph(void);
-
-			Polymorph*		clone(void) const;
+			virtual ASpell*	clone(void) const;
 	};
 
 #endif // POLYMORPH_HPP

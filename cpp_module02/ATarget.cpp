@@ -1,11 +1,12 @@
-#include"ATarget.hpp"
+#include "ATarget.hpp"
 
 ATarget::ATarget(void)
 {
 
 }
 
-ATarget::ATarget(const std::string& newType) : type(newType)
+ATarget::ATarget(const std::string& newType) :
+type(newType)
 {
 
 }
@@ -21,7 +22,7 @@ ATarget&	ATarget::operator=(const ATarget& rhs)
 	{
 		this->type = rhs.getType();
 	}
-	return(*this);
+	return (*this);
 }
 
 ATarget::~ATarget(void)
@@ -31,10 +32,10 @@ ATarget::~ATarget(void)
 
 const std::string&		ATarget::getType(void) const
 {
-	return(this->type);
+	return (this->type);
 }
 
-void					ATarget::getHitBySpell(const ASpell& spell) const
+void	ATarget::getHitBySpell(const ASpell& spell) const
 {
-	std::cout << this->getType()  << " has been " << spell.getEffects() << "!" << std::endl;
+	std::cout << this->getType() << " has been " << spell.getEffects() << "!" << std::endl;
 }

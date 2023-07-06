@@ -10,7 +10,7 @@ Dummy::~Dummy(void)
 
 }
 
-Dummy*		Dummy::clone(void) const
+ATarget*	Dummy::clone(void) const
 {
 	return (new Dummy());
 }

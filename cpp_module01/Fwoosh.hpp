@@ -8,9 +8,7 @@
 		public:
 			Fwoosh(void);
 			virtual ~Fwoosh(void);
-
-			Fwoosh*		clone(void) const;
-
+			virtual ASpell*	clone(void) const;
 	};
 
 #endif // FWOOSH_HPP

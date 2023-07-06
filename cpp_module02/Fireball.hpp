@@ -8,9 +8,7 @@
 		public:
 			Fireball(void);
 			virtual ~Fireball(void);
-
-			Fireball*		clone(void) const;
-
+			virtual ASpell*	clone(void) const;
 	};
 
 #endif // FIREBALL_HPP

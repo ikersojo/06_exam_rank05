@@ -10,7 +10,7 @@ Fwoosh::~Fwoosh(void)
 
 }
 
-Fwoosh*		Fwoosh::clone(void) const
+ASpell*	Fwoosh::clone(void) const
 {
 	return (new Fwoosh());
 }

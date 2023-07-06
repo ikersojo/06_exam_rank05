@@ -1,12 +1,12 @@
 #ifndef TARGETGENERATOR_HPP
 	#define TARGETGENERATOR_HPP
 
-	#include <iostream>
 	#include <string>
-	#include "ASpell.hpp"
+	#include <iostream>
+	#include "ATarget.hpp"
 	#include <map>
 
-	class ASpell;
+	class ATarget;
 
 	class TargetGenerator
 	{
@@ -15,15 +15,11 @@
 			~TargetGenerator(void);
 
 			void		learnTargetType(ATarget* target);
-			void		forgetTargetType(const std::string& type);
-			ATarget*	createTarget(const std::string& type);
+			void		forgetTargetType(const std::string& targetName);
+			ATarget*	createTarget(const std::string& targetName);
 
 		private:
-			TargetGenerator(const TargetGenerator& obj);
-			TargetGenerator&	operator=(const TargetGenerator& rhs);
-
-			std::map<std::string, ATarget*>	targetList;
-
+			std::map< std::string, ATarget* >	targetList;
 	};
 
 #endif // TARGETGENERATOR_HPP

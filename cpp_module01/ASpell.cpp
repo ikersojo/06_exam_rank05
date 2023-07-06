@@ -5,7 +5,8 @@ ASpell::ASpell(void)
 
 }
 
-ASpell::ASpell(const std::string& newName, const std::string& newEffects): name(newName), effects(newEffects)
+ASpell::ASpell(const std::string& newName, const std::string& newEffects) :
+name(newName), effects(newEffects)
 {
 
 }
@@ -30,17 +31,17 @@ ASpell::~ASpell(void)
 
 }
 
-std::string			ASpell::getName(void) const
+std::string		ASpell::getName(void) const
 {
 	return (this->name);
 }
 
-std::string			ASpell::getEffects(void) const
+std::string		ASpell::getEffects(void) const
 {
 	return (this->effects);
 }
 
-void				ASpell::launch(const ATarget& target) const
+void			ASpell::launch(const ATarget& target)
 {
 	target.getHitBySpell(*this);
 }
